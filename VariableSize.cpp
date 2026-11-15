@@ -4,11 +4,17 @@
 #include <cstdio>
 #include <cstdlib>
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 
 int main(int nNumberofArgs, char* pszArgs[])
 {
+	// переводим консоль на CP1251 — ту же, что и у строк в программе
+	SetConsoleCP(1251);        // кодировка ввода (работает cin)
+	SetConsoleOutputCP(1251);  // кодировка вывода (работает cout)
+	setlocale(LC_ALL, "Russian");
+
 	bool			b;
 	char			c;
 	int				n;
